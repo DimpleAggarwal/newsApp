@@ -22,7 +22,7 @@ myApp.controller('MainController', ['$scope', '$http', '$mdSidenav','$sce', func
         var newsData = function () {
             $mdSidenav('left').toggle();
             $http({
-                url: 'services/get-news.php?uri=' + $scope.uriLink,
+                url: 'http://pravinasafety.com/services/get-news.php?uri=' + $scope.uriLink,
                 method: 'POST'
             }).then(function (response) {
                 $scope.news = response.data;
